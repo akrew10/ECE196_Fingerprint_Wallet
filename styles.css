@@ -72,6 +72,8 @@ h2 {
 }
 
 .solution img {
+  max-width: 300px;  
+  height: auto;      
   margin-top: 10px;
   max-width: 100%;
   border-radius: 5px;
