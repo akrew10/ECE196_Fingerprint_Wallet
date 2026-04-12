@@ -71,12 +71,36 @@ h2 {
   border-radius: 8px;
 }
 
+.solution h4 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.solution ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.solution li {
+  margin-bottom: 8px;
+}
+
 .solution img {
   max-width: 300px;  
   height: auto;      
   margin-top: 10px;
   max-width: 100%;
   border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 20px;
+  }
+
+  nav a {
+    padding: 10px 14px;
+  }
 }
 
 footer {
