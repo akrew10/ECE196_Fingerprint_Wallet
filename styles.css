@@ -97,11 +97,12 @@ h2 {
   display: flex;
   gap: 20px;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
   margin: 20px 0;
 }
 
 .solution-img {
+  flex: 1;
   text-align: center;
 }
 
