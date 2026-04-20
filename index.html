@@ -16,6 +16,7 @@
 <nav>
   <a href="#team">Team</a>
   <a href="#problem">Problem</a>
+  <a href="#solution">Our Solution</a>
 </nav>
 
 <section id="team">
@@ -105,6 +106,49 @@ Current solutions don’t fully prevent the issue or alert users in real time.
   </ul>
   <img src="airtag.jpg" alt="AirTag in wallet" width="250">
 </div>
+</section>
+
+<section id="solution">
+  <h2>Our Solution</h2>
+
+  <h3>The Fingerprint Wallet</h3>
+  <p>
+    A smart, biometric-secured wallet that uses fingerprint authentication, motion detection, and wireless connectivity to prevent theft and protect your belongings in real time.
+  </p>
+
+  <div class="solution-overview">
+    <div class="solution-images">
+      <div class="solution-img">
+        <img src="Wallet.png" alt="Fingerprint Wallet concept" width="400">
+        <p><em>Wallet Concept Design</em></p>
+      </div>
+      <div class="solution-img">
+        <img src="Wallet full skeleton.png" alt="Wallet exploded view with labeled layers" width="400">
+        <p><em>Exploded View — Internal Layers</em></p>
+      </div>
+    </div>
+  </div>
+
+  <h3>What the Technology Will Do</h3>
+  <ul>
+    <li>Authenticate the owner via fingerprint before allowing the wallet to open</li>
+    <li>Detect unauthorized removal from your pocket using motion sensors</li>
+    <li>Send real-time alerts to your phone if tampering or theft is detected</li>
+    <li>Block RFID skimming with a built-in shielding mesh</li>
+    <li>Provide haptic and audio feedback for user interactions</li>
+  </ul>
+
+  <h3>Layer-by-Layer Breakdown</h3>
+  <ul class="layers">
+    <li><strong>Layer 1 — The Face:</strong> The carbon fiber shell features a precisely machined circular cutout for the fingerprint sensor. A small pinhole at the top houses the ambient light sensor — this allows the wallet to "know" it's in your pocket so it doesn't accidentally trigger.</li>
+    <li><strong>Layer 2 — The Gesture Strip:</strong> Directly beneath the top shell is a capacitive touch module. It's designed as a separate flex-cable component that sits flush against the shell, allowing you to swipe or tap on the surface of the wallet to interact with it.</li>
+    <li><strong>Layer 3 — The Brain:</strong> ESP32-S3 module, biometric sensor, power and connectivity management, audio feedback, motion sensors, LED indicators, and more — all integrated on a compact board.</li>
+    <li><strong>Layer 4 — The Battery:</strong> A rechargeable lithium battery providing power to all electronic components.</li>
+    <li><strong>Layer 5 — The Motor:</strong> A micro-stepper motor positioned next to the battery, responsible for the mechanical card ejection mechanism.</li>
+    <li><strong>Layer 6 — RFID Mesh:</strong> A shielding layer that blocks contactless card skimming, protecting your cards from unauthorized RFID readers.</li>
+    <li><strong>Layer 7 — The Card Stack:</strong> The compartment that holds your physical cards, secured behind all the protective layers above.</li>
+    <li><strong>Layer 8 — The Chassis:</strong> The structural backbone of the wallet — the bottom shell that holds everything together.</li>
+  </ul>
 </section>
 
 <footer>
