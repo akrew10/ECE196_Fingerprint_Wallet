@@ -145,25 +145,72 @@ Current solutions don’t fully prevent the issue or alert users in real time.
   </ul>
 
   <h3>Technological Aspects of Solution</h3>
-  <ul>
-    <li><strong>Layer 1 — The Face:</strong> The top shell features a precisely machined circular cutout for the fingerprint sensor. A small pinhole at the top houses the ambient light sensor, this allows the wallet to "know" it's in your pocket so it doesn't accidentally trigger.</li>
-    <li><strong>Layer 2 — The Gesture Strip:</strong> Directly beneath the top shell is a capacitive touch module. It's designed to swipe or tap on the surface of the wallet to interact with it.</li>
-    <li><strong>Layer 3 — The PCB:</strong> ESP32-S3 module, biometric sensor, power and connectivity management, audio feedback, motion sensors, LED indicators.</li>
-    <li><strong>Layer 4 — The Battery:</strong> A rechargeable lithium battery.</li>
-    <li><strong>Layer 5 — The Motor:</strong> A micro stepper motor positioned next to the battery, responsible for the card ejection mechanism.</li>
-    <li><strong>Layer 6 — RFID Mesh:</strong> A layer that blocks contactless card skimming, protecting your cards from unauthorized RFID readers.</li>
-    <li><strong>Layer 7 — The Card Stack:</strong> The compartment that holds your physical cards, secured behind all the protective layers above.</li>
-    <li><strong>Layer 8 — The Chassis:</strong> The bottom shell that holds everything together.</li>
-  </ul>
+  <div class="tech-layers">
+    <div class="tech-layer">
+      <span class="layer-number">1</span>
+      <div class="layer-content">
+        <strong>The Face</strong>
+        <p>The top shell features a precisely machined circular cutout for the fingerprint sensor. A small pinhole at the top houses the ambient light sensor, this allows the wallet to "know" it's in your pocket so it doesn't accidentally trigger.</p>
+      </div>
+    </div>
+    <div class="tech-layer">
+      <span class="layer-number">2</span>
+      <div class="layer-content">
+        <strong>The Gesture Strip</strong>
+        <p>Directly beneath the top shell is a capacitive touch module. It's designed to swipe or tap on the surface of the wallet to interact with it.</p>
+      </div>
+    </div>
+    <div class="tech-layer">
+      <span class="layer-number">3</span>
+      <div class="layer-content">
+        <strong>The PCB</strong>
+        <p>ESP32-S3 module, biometric sensor, power and connectivity management, audio feedback, motion sensors, LED indicators.</p>
+      </div>
+    </div>
+    <div class="tech-layer">
+      <span class="layer-number">4</span>
+      <div class="layer-content">
+        <strong>The Battery</strong>
+        <p>A rechargeable lithium battery.</p>
+      </div>
+    </div>
+    <div class="tech-layer">
+      <span class="layer-number">5</span>
+      <div class="layer-content">
+        <strong>The Motor</strong>
+        <p>A micro stepper motor positioned next to the battery, responsible for the card ejection mechanism.</p>
+      </div>
+    </div>
+    <div class="tech-layer">
+      <span class="layer-number">6</span>
+      <div class="layer-content">
+        <strong>RFID Mesh</strong>
+        <p>A layer that blocks contactless card skimming, protecting your cards from unauthorized RFID readers.</p>
+      </div>
+    </div>
+    <div class="tech-layer">
+      <span class="layer-number">7</span>
+      <div class="layer-content">
+        <strong>The Card Stack</strong>
+        <p>The compartment that holds your physical cards, secured behind all the protective layers above.</p>
+      </div>
+    </div>
+    <div class="tech-layer">
+      <span class="layer-number">8</span>
+      <div class="layer-content">
+        <strong>The Chassis</strong>
+        <p>The bottom shell that holds everything together.</p>
+      </div>
+    </div>
+  </div>
 
   <h3>Parts List</h3>
   <ul>
     <li>Microcontroller (ESP32 or similar with BLE support)</li>
     <li>Fingerprint sensor module</li>
-    <li>BLE module (if not integrated in microcontroller)</li>
     <li>Buzzer and/or vibration motor</li>
     <li>Battery and charging circuit</li>
-    <li>Optional motion/proximity sensors</li>
+    <li>Motion/proximity sensors</li>
     <li>Wallet chassis materials and fasteners</li>
   </ul>
 
@@ -204,36 +251,32 @@ Current solutions don’t fully prevent the issue or alert users in real time.
   </ul>
 
   <h4>Figure of Timeline</h4>
-  <table>
-    <tr>
-      <th>Date</th>
-      <th>Milestone</th>
-    </tr>
-    <tr>
-      <td>April 25, 2026</td>
-      <td>Fingerprint sensor enrolls and verifies a stored fingerprint on the ESP32-S3</td>
-    </tr>
-    <tr>
-      <td>May 2, 2026</td>
-      <td>Motion sensor detects wallet removal and triggers a buzzer/vibration alert</td>
-    </tr>
-    <tr>
-      <td>May 9, 2026</td>
-      <td>BLE notification is received on phone when unauthorized motion is detected</td>
-    </tr>
-    <tr>
-      <td>May 16, 2026</td>
-      <td>Stepper motor ejects card stack after successful fingerprint authentication</td>
-    </tr>
-    <tr>
-      <td>May 23, 2026</td>
-      <td>All components integrated into 3D-printed wallet enclosure</td>
-    </tr>
-    <tr>
-      <td>May 30, 2026</td>
-      <td>Full end-to-end demo: fingerprint unlock, card eject, and theft alert received on phone</td>
-    </tr>
-  </table>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-date">April 25, 2026</div>
+      <div class="timeline-desc">Fingerprint sensor enrolls and verifies a stored fingerprint on the ESP32-S3</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">May 2, 2026</div>
+      <div class="timeline-desc">Motion sensor detects wallet removal and triggers a buzzer/vibration alert</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">May 9, 2026</div>
+      <div class="timeline-desc">BLE notification is received on phone when unauthorized motion is detected</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">May 16, 2026</div>
+      <div class="timeline-desc">Stepper motor ejects card stack after successful fingerprint authentication</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">May 23, 2026</div>
+      <div class="timeline-desc">All components integrated into 3D-printed wallet enclosure</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">May 30, 2026</div>
+      <div class="timeline-desc">Full end-to-end demo: fingerprint unlock, card eject, and theft alert received on phone</div>
+    </div>
+  </div>
 </section>
 
 <footer>
