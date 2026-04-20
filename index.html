@@ -116,6 +116,52 @@ Current solutions don’t fully prevent the issue or alert users in real time.
     A smart, biometric secured wallet that uses fingerprint authentication, motion detection, and wireless connectivity to prevent theft and protect your belongings in real time.
   </p>
 
+  <h3>Testable Hypothesis</h3>
+  <p>
+    If a wallet combines biometric authentication, BLE-based proximity monitoring, and mobile alerts, then it can reduce successful pickpocketing incidents by preventing unauthorized access and notifying the owner immediately when separation occurs.
+  </p>
+
+  <h3>Milestones</h3>
+
+  <h4>Milestone 1: Hardware Integration and Basic Functionality</h4>
+  <p>Goal: Prove that core components work together.</p>
+  <ul>
+    <li>Select and acquire components: microcontroller, BLE module, biometric sensor, buzzer/vibration motor</li>
+    <li>Successfully enroll and verify a fingerprint</li>
+    <li>Send a simple BLE signal to a phone</li>
+    <li>Output: Wallet unlocks only with authorized fingerprint</li>
+  </ul>
+
+  <h4>Milestone 2: Proximity Detection and Alert System</h4>
+  <p>Goal: Detect separation between user and wallet.</p>
+  <ul>
+    <li>Define threshold distance (for example, about 5 to 10 meters)</li>
+    <li>Trigger alert system when threshold exceeded (phone notification or wallet buzzer/vibration)</li>
+    <li>Output: Real-time alert when wallet is no longer near the user</li>
+  </ul>
+
+  <h4>Milestone 3: Mobile App Development</h4>
+  <p>Goal: Create user interface and control layer.</p>
+  <ul>
+    <li>Develop a simple app (likely using Flutter or React Native)</li>
+    <li>Pair with wallet via BLE</li>
+    <li>Display connection status</li>
+    <li>Show last known location</li>
+    <li>Enable/disable alerts</li>
+    <li>Output: User can monitor and interact with wallet from phone</li>
+  </ul>
+
+  <h3>Parts List</h3>
+  <ul>
+    <li>Microcontroller (ESP32 or similar with BLE support)</li>
+    <li>Fingerprint sensor module</li>
+    <li>BLE module (if not integrated in microcontroller)</li>
+    <li>Buzzer and/or vibration motor</li>
+    <li>Battery and charging circuit</li>
+    <li>Optional motion/proximity sensors</li>
+    <li>Wallet chassis materials and fasteners</li>
+  </ul>
+
   <div class="solution-overview">
     <div class="solution-images">
       <div class="solution-img">
