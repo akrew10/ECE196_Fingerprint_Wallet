@@ -182,63 +182,75 @@ Current solutions don't fully prevent the issue or alert users in real time.
 <section id="milestones">
   <h2>Milestones</h2>
 
-  <h4>Milestone 1: Hardware Integration and Basic Functionality</h4>
-  <p>Goal: Prove that core components work together.</p>
+  <h4>Milestone 1 (Week 7: May 11–17): Parts Arrival, Hardware Bring-Up, and Sensor Validation</h4>
+  <p>Goal: Receive components, validate hardware, and establish baseline functionality.</p>
   <ul>
-    <li>Select and acquire components: microcontroller, BLE module, biometric sensor, buzzer/vibration motor</li>
-    <li>Successfully enroll and verify a fingerprint</li>
-    <li>Send a simple BLE signal to a phone</li>
-    <li>Output: Wallet unlocks only with authorized fingerprint</li>
+    <li>Receive and inventory all ordered components (ESP32-S3, fingerprint sensor, IMU, LiPo battery, boost converter, buzzer, LEDs)</li>
+    <li>Assemble and test individual modules on breadboard/prototype setup</li>
+    <li>Verify ESP32-S3 power system (3.7V LiPo + boost converter + 3.3V regulation)</li>
+    <li>Establish UART communication with fingerprint sensor</li>
+    <li>Verify IMU/accelerometer motion detection over I2C</li>
+    <li>Output: Core hardware components successfully communicate and function independently</li>
   </ul>
 
-  <h4>Milestone 2: Proximity Detection and Alert System</h4>
-  <p>Goal: Detect separation between user and wallet.</p>
+  <h4>Milestone 2 (Week 8: May 18–24): Security Logic and Anti-Theft Detection</h4>
+  <p>Goal: Integrate authentication and theft-detection systems.</p>
   <ul>
-    <li>Define threshold distance (for example, about 5 to 10 meters)</li>
-    <li>Trigger alert system when threshold exceeded (phone notification or wallet buzzer/vibration)</li>
-    <li>Output: Real-time alert when wallet is no longer near the user</li>
+    <li>Enroll and verify authorized fingerprint templates</li>
+    <li>Implement owner-verification logic for secure wallet access</li>
+    <li>Use IMU/accelerometer to detect suspicious movement or wallet displacement</li>
+    <li>Trigger buzzer/LED alert for unauthorized movement</li>
+    <li>Establish BLE communication between wallet and phone</li>
+    <li>Output: Wallet verifies owner identity and detects potential theft events</li>
   </ul>
 
-  <h4>Milestone 3: Mobile App Development</h4>
-  <p>Goal: Create user interface and control layer.</p>
+  <h4>Milestone 3 (Week 9: May 25–31): Full System Integration and PCB Prototype</h4>
+  <p>Goal: Transition from prototype to integrated final system.</p>
   <ul>
-    <li>Develop a simple app (likely using Flutter or React Native)</li>
-    <li>Pair with wallet via BLE</li>
-    <li>Display connection status</li>
-    <li>Show last known location</li>
-    <li>Enable/disable alerts</li>
-    <li>Output: User can monitor and interact with wallet from phone</li>
+    <li>Finalize PCB schematic and layout</li>
+    <li>Integrate fingerprint sensor, IMU, BLE, and alert systems into one hardware platform</li>
+    <li>Implement battery charging and power management system</li>
+    <li>Test complete system reliability under real-world wallet scenarios</li>
+    <li>Begin enclosure/wallet form-factor assembly</li>
+    <li>Output: Fully integrated smart anti-theft wallet prototype</li>
+  </ul>
+
+  <h4>Milestone 4 (Week 10: June 1–7): Final Demo, Optimization, and Presentation</h4>
+  <p>Goal: Polish project for submission and demonstration.</p>
+  <ul>
+    <li>Optimize BLE alerts and fingerprint response time</li>
+    <li>Finalize enclosure and presentation visuals</li>
+    <li>Perform full end-to-end testing</li>
+    <li>Demonstrate fingerprint authentication, theft detection, and phone connectivity</li>
+    <li>Prepare final website, documentation, and project presentation</li>
+    <li>Output: Final working smart anti-theft wallet ready for grading</li>
   </ul>
 
   <h3>Figure of Timeline</h3>
   <table>
     <tr>
-      <th>Date</th>
+      <th>Week / Date</th>
       <th>Milestone</th>
     </tr>
     <tr>
-      <td>April 25, 2026</td>
-      <td>Fingerprint sensor enrolls and verifies a stored fingerprint on the ESP32-S3</td>
+      <td>Week 7 (May 11–17, 2026)</td>
+      <td>Parts received; ESP32-S3, fingerprint sensor, IMU, and power systems individually tested and validated</td>
     </tr>
     <tr>
-      <td>May 2, 2026</td>
-      <td>Motion sensor detects wallet removal and triggers a buzzer/vibration alert</td>
+      <td>Week 8 (May 18–24, 2026)</td>
+      <td>Fingerprint authentication and IMU-based theft detection integrated with buzzer/LED alerts</td>
     </tr>
     <tr>
-      <td>May 9, 2026</td>
-      <td>BLE notification is received on phone when unauthorized motion is detected</td>
+      <td>Week 8–9 (May 18–31, 2026)</td>
+      <td>BLE phone communication established for proximity monitoring and anti-theft notifications</td>
     </tr>
     <tr>
-      <td>May 16, 2026</td>
-      <td>Stepper motor ejects card stack after successful fingerprint authentication</td>
+      <td>Week 9 (May 25–31, 2026)</td>
+      <td>PCB finalized and full smart wallet hardware integrated into prototype enclosure</td>
     </tr>
     <tr>
-      <td>May 23, 2026</td>
-      <td>All components integrated into 3D-printed wallet enclosure</td>
-    </tr>
-    <tr>
-      <td>May 30, 2026</td>
-      <td>Full end-to-end demo: fingerprint unlock, card eject, and theft alert received on phone</td>
+      <td>Week 10 (June 1–7, 2026)</td>
+      <td>Final end-to-end demo: fingerprint verification, theft detection, BLE alerting, and complete project presentation</td>
     </tr>
   </table>
 </section>
