@@ -9,7 +9,7 @@
 <body>
 
 <header>
-  <h1>Final Project</h1>
+  <h1>Fingerprint Authenticated Wallet</h1>
   <p>ECE 196</p>
 </header>
 
@@ -19,6 +19,8 @@
   <a href="#solution">Solution</a>
   <a href="#block-diagram">Block Diagram</a>
   <a href="#milestones">Milestones</a>
+  <a href="#pcb-diagram">PCB Diagrams</a>
+  <a href="#Poster">Poster/Video</a>
 </nav>
 
 <section id="team">
@@ -192,67 +194,62 @@ Current solutions don't fully prevent the issue or alert users in real time.
 </section>
 
 <section id="milestones">
-  <h2>Milestones</h2>
 
-  <h4>Milestone 1: Hardware Integration and Basic Functionality</h4>
-  <p>Goal: Prove that core components work together.</p>
-  <ul>
-    <li>Select and acquire components: microcontroller, BLE module, biometric sensor, buzzer/vibration motor</li>
-    <li>Successfully enroll and verify a fingerprint</li>
-    <li>Send a simple BLE signal to a phone</li>
-    <li>Output: Wallet unlocks only with authorized fingerprint</li>
-  </ul>
 
-  <h4>Milestone 2: Proximity Detection and Alert System</h4>
-  <p>Goal: Detect separation between user and wallet.</p>
-  <ul>
-    <li>Define threshold distance (for example, about 5 to 10 meters)</li>
-    <li>Trigger alert system when threshold exceeded (phone notification or wallet buzzer/vibration)</li>
-    <li>Output: Real-time alert when wallet is no longer near the user</li>
-  </ul>
-
-  <h4>Milestone 3: Mobile App Development</h4>
-  <p>Goal: Create user interface and control layer.</p>
-  <ul>
-    <li>Develop a simple app (likely using Flutter or React Native)</li>
-    <li>Pair with wallet via BLE</li>
-    <li>Display connection status</li>
-    <li>Show last known location</li>
-    <li>Enable/disable alerts</li>
-    <li>Output: User can monitor and interact with wallet from phone</li>
-  </ul>
-
-  <h3>Figure of Timeline</h3>
+  <h3>Figure of Timeline/Milestones</h3>
   <table>
     <tr>
-      <th>Date</th>
+      <th>Week / Date</th>
       <th>Milestone</th>
     </tr>
     <tr>
-      <td>April 25, 2026</td>
-      <td>Fingerprint sensor enrolls and verifies a stored fingerprint on the ESP32-S3</td>
+      <td>Week 7 (May 11–17, 2026)</td>
+      <td>Parts received; ESP32-S3, fingerprint sensor, IMU, and power systems individually tested and validated. Assemble and test 
+        individual modules on breadboard/prototype setup. PCB made with all the parts assembled on it. 
+        Goal: Core hardware components successfully communicate and function independently</td>
     </tr>
     <tr>
-      <td>May 2, 2026</td>
-      <td>Motion sensor detects wallet removal and triggers a buzzer/vibration alert</td>
+      <td>Week 8 (May 18–24, 2026)</td>
+      <td>Fingerprint authentication and IMU-based theft detection integrated with buzzer alerts. CAD Prototype finalized.
+          Begin software development to control the buzzer and the fingerprint sensor.
+           Goal: Wallet verifies owner identity and detects potential theft events</td>
     </tr>
     <tr>
-      <td>May 9, 2026</td>
-      <td>BLE notification is received on phone when unauthorized motion is detected</td>
+      <td>Week 9 (May 25–31, 2026)</td>
+      <td>PCB finalized and full smart wallet hardware integrated into prototype enclosure. 
+        Begin enclosure/wallet form-factor assembly. 
+       Goal: Transition from prototype to integrated final system. Ensure functionality</td>
     </tr>
     <tr>
-      <td>May 16, 2026</td>
-      <td>Stepper motor ejects card stack after successful fingerprint authentication</td>
-    </tr>
-    <tr>
-      <td>May 23, 2026</td>
-      <td>All components integrated into 3D-printed wallet enclosure</td>
-    </tr>
-    <tr>
-      <td>May 30, 2026</td>
-      <td>Full end-to-end demo: fingerprint unlock, card eject, and theft alert received on phone</td>
+      <td>Week 10 (June 1–7, 2026)</td>
+      <td>Final end-to-end demo: fingerprint verification, theft detection, BLE alerting, and complete project presentation
+      Goal: Polish project for submission and demonstration. </td>
     </tr>
   </table>
+</section>
+
+  <section id="pcb-diagram">
+  <h2>PCB</h2>
+    <p> The purpose of our PCB is for the fingerprint authentication so that only the registered owner(s) can open the wallet. 
+      Upon receiving the signal that the correct fingerprint was provided, the PCB will send a signal to the motor to unlock it.
+      We also have an IMU to detect irregular motion in case of theft. Combined with a disconnected Bluetooth, the wallet will alarm
+      the buzzer so that the owner can find it before the thief can get far. </p>
+  <div class="pcb-diagram">
+    <h3>PCB Schematic</h3>
+    <img src="kicad_sch.png" alt="PCB Schematic" width="700">
+    <h3>PCB Design</h3>
+     <img src="kicad_pcb.png" alt="PCB Diagram" width="700">
+    <h3>3D Viewer</h3>
+     <img src="kicad_3d_annotated.png" alt="PCB 3D Viewer" width="700">
+  </div>
+</section>
+
+<section id="Poster">
+<h2><a href="https://docs.google.com/presentation/d/122mFUHDba3azXdcyf6lsMQzxCOAW6XJROJEv4InLaDI/edit?slide=id.p1#slide=id.p1">Poster</a></h2>
+    <img src="ECE 196 Project Poster.png" alt="Project Poster" width="700">
+</section>
+  <section id="Video">
+  <h2><a href="https://docs.google.com/document/d/1hPFYabFbzJ7slNuurlS4tCz-e0iYMCi0ZIbYs_rMffc/edit?usp=sharing">Link to Video Idea</a></h2>
 </section>
 
 <footer>
