@@ -180,53 +180,9 @@ Current solutions don't fully prevent the issue or alert users in real time.
 </section>
 
 <section id="milestones">
-  <h2>Milestones</h2>
 
-  <h4>Milestone 1 (Week 7: May 11–17): Parts Arrival, Hardware Bring-Up, and Sensor Validation</h4>
-  <p>Goal: Receive components, validate hardware, and establish baseline functionality.</p>
-  <ul>
-    <li>Receive and inventory all ordered components (ESP32-S3, fingerprint sensor, IMU, LiPo battery, boost converter, buzzer, LEDs)</li>
-    <li>Assemble and test individual modules on breadboard/prototype setup</li>
-    <li>Verify ESP32-S3 power system (3.7V LiPo + boost converter + 3.3V regulation)</li>
-    <li>Establish UART communication with fingerprint sensor</li>
-    <li>Verify IMU/accelerometer motion detection over I2C</li>
-    <li>Output: Core hardware components successfully communicate and function independently</li>
-  </ul>
 
-  <h4>Milestone 2 (Week 8: May 18–24): Security Logic and Anti-Theft Detection</h4>
-  <p>Goal: Integrate authentication and theft-detection systems.</p>
-  <ul>
-    <li>Enroll and verify authorized fingerprint templates</li>
-    <li>Implement owner-verification logic for secure wallet access</li>
-    <li>Use IMU/accelerometer to detect suspicious movement or wallet displacement</li>
-    <li>Trigger buzzer/LED alert for unauthorized movement</li>
-    <li>Establish BLE communication between wallet and phone</li>
-    <li>Output: Wallet verifies owner identity and detects potential theft events</li>
-  </ul>
-
-  <h4>Milestone 3 (Week 9: May 25–31): Full System Integration and PCB Prototype</h4>
-  <p>Goal: Transition from prototype to integrated final system.</p>
-  <ul>
-    <li>Finalize PCB schematic and layout</li>
-    <li>Integrate fingerprint sensor, IMU, BLE, and alert systems into one hardware platform</li>
-    <li>Implement battery charging and power management system</li>
-    <li>Test complete system reliability under real-world wallet scenarios</li>
-    <li>Begin enclosure/wallet form-factor assembly</li>
-    <li>Output: Fully integrated smart anti-theft wallet prototype</li>
-  </ul>
-
-  <h4>Milestone 4 (Week 10: June 1–7): Final Demo, Optimization, and Presentation</h4>
-  <p>Goal: Polish project for submission and demonstration.</p>
-  <ul>
-    <li>Optimize BLE alerts and fingerprint response time</li>
-    <li>Finalize enclosure and presentation visuals</li>
-    <li>Perform full end-to-end testing</li>
-    <li>Demonstrate fingerprint authentication, theft detection, and phone connectivity</li>
-    <li>Prepare final website, documentation, and project presentation</li>
-    <li>Output: Final working smart anti-theft wallet ready for grading</li>
-  </ul>
-
-  <h3>Figure of Timeline</h3>
+  <h3>Figure of Timeline/Milestones</h3>
   <table>
     <tr>
       <th>Week / Date</th>
@@ -234,23 +190,26 @@ Current solutions don't fully prevent the issue or alert users in real time.
     </tr>
     <tr>
       <td>Week 7 (May 11–17, 2026)</td>
-      <td>Parts received; ESP32-S3, fingerprint sensor, IMU, and power systems individually tested and validated</td>
+      <td>Parts received; ESP32-S3, fingerprint sensor, IMU, and power systems individually tested and validated. Assemble and test 
+        individual modules on breadboard/prototype setup. PCB made with all the parts assembled on it. 
+        Goal: Core hardware components successfully communicate and function independently</td>
     </tr>
     <tr>
       <td>Week 8 (May 18–24, 2026)</td>
-      <td>Fingerprint authentication and IMU-based theft detection integrated with buzzer/LED alerts</td>
-    </tr>
-    <tr>
-      <td>Week 8–9 (May 18–31, 2026)</td>
-      <td>BLE phone communication established for proximity monitoring and anti-theft notifications</td>
+      <td>Fingerprint authentication and IMU-based theft detection integrated with buzzer alerts. CAD Prototype finalized.
+          Begin software development to control the buzzer and the fingerprint sensor.
+           Goal: Wallet verifies owner identity and detects potential theft events</td>
     </tr>
     <tr>
       <td>Week 9 (May 25–31, 2026)</td>
-      <td>PCB finalized and full smart wallet hardware integrated into prototype enclosure</td>
+      <td>PCB finalized and full smart wallet hardware integrated into prototype enclosure. 
+        Begin enclosure/wallet form-factor assembly. 
+       Goal: Transition from prototype to integrated final system. Ensure functionality</td>
     </tr>
     <tr>
       <td>Week 10 (June 1–7, 2026)</td>
-      <td>Final end-to-end demo: fingerprint verification, theft detection, BLE alerting, and complete project presentation</td>
+      <td>Final end-to-end demo: fingerprint verification, theft detection, BLE alerting, and complete project presentation
+      Goal: Polish project for submission and demonstration. </td>
     </tr>
   </table>
 </section>
