@@ -257,6 +257,10 @@ Current solutions don't fully prevent the issue or alert users in real time.
 
   <section id="pcb-diagram">
   <h2>PCB</h2>
+    <p> The purpose of our PCB is for the fingerprint authentication so that only the registered owner(s) can open the wallet. 
+      Upon receiving the signal that the correct fingerprint was provided, the PCB will send a signal to the motor to unlock it.
+      We also have an IMU to detect irregular motion in case of theft. Combined with a disconnected Bluetooth, the wallet will alarm
+      the buzzer so that the owner can find it before the thief can get far. </p>
   <div class="pcb-diagram">
     <h3>PCB Schematic</h3>
     <img src="kicad_sch.png" alt="PCB Schematic" width="700">
