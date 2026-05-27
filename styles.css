@@ -53,10 +53,13 @@ header h1 {
 }
 
 header p {
-  margin-top: 10px;
-  font-size: 1.05rem;
-  color: #b0b0b5;
-  font-weight: 400;
+  margin: 12px auto 0 auto;
+  font-size: 1.1rem;
+  color: #d0d0d5;
+  font-weight: 500;
+  text-align: center;
+  width: fit-content;
+  letter-spacing: 0.5px;
 }
 
 /* =========================
@@ -211,6 +214,31 @@ p {
   margin: 18px auto 0;
   max-width: 100%;
   border-radius: 12px;
+  box-shadow: var(--shadow-light);
+}
+
+.problem-motivation-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.problem-motivation-text {
+  flex: 1 1 600px;
+}
+
+.problem-motivation-image {
+  flex: 0 1 320px;
+  text-align: center;
+}
+
+.problem-motivation-image img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 18px;
   box-shadow: var(--shadow-light);
 }
 
@@ -434,5 +462,115 @@ footer {
 
   section {
     padding: 28px 18px;
+  }
+}
+
+
+/* =========================
+   Presentation Enhancements
+========================= */
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(0,113,227,0.08), transparent 25%),
+    radial-gradient(circle at bottom right, rgba(41,151,255,0.08), transparent 25%),
+    linear-gradient(to bottom, #f5f7fa, #e9edf3);
+}
+
+/* Full-screen presentation sections */
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-margin-top: 80px;
+  border: 1px solid rgba(255,255,255,0.7);
+}
+
+/* Centered section headers */
+h2 {
+  text-align: center;
+  border-bottom: none;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  margin: 14px auto 0;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+}
+
+h3 {
+  text-align: center;
+}
+
+/* More polished cards */
+.solution,
+ul.layers li,
+table {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+/* Slightly more dynamic hover */
+section:hover {
+  transform: translateY(-5px);
+}
+
+/* Better image consistency */
+.solution-img img,
+.block-diagram img,
+.pcb-diagram img,
+#Poster img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.solution-img img:hover,
+.block-diagram img:hover,
+.pcb-diagram img:hover,
+#Poster img:hover {
+  transform: scale(1.015);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.12);
+}
+
+/* Fix oversized inspiration images */
+.inspiration-row .solution-img {
+  flex: 0 1 220px;
+}
+
+.inspiration-row .solution-img img {
+  max-width: 220px;
+}
+
+/* Cleaner text width for presenting */
+p,
+li,
+td {
+  max-width: 95ch;
+}
+
+/* Make poster section fit cleaner */
+#Poster img {
+  max-width: 85%;
+}
+
+/* Presentation-friendly spacing */
+.block-diagram,
+.pcb-diagram {
+  gap: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  section {
+    min-height: auto;
+  }
+
+  .inspiration-row .solution-img img {
+    max-width: 180px;
   }
 }
