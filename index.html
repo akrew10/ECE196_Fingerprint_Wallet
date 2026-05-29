@@ -10,7 +10,7 @@
 
 <header>
   <h1>Fingerprint Authenticated Wallet</h1>
-  <p>ECE 196</p>
+  <p>ECE 196 Spring 2026</p>
 </header>
 
 <nav>
@@ -91,38 +91,40 @@
 
         <li>What is missing</li>
           <ul>
-            <li> Doesn't help recover the item once it's gone </li>
+            <li> Doesn't help recover the item  </li>
             <li> No real-time alert system </li>
-            <li> Can be bulky or less convenient for everyday use </li>
+            <li> Can be bulky for everyday use </li>
           </ul>
 
 
       </ul>
-      <img src="Anti-theft-bag.jpg" alt="Solution 1 image" width="250">
+       <div class="solution-image">
+      <img src="Anti-theft-bag.jpg" alt="Solution 1 image">
+    </div>
     </div>
 
     <div class="solution">
   <h4>Solution 2</h4>
-  <h3>Smart Trackers (Apple AirTag)</h3>
+  <h3>Apple AirTag</h3>
   <ul>
 
     <li>What works well</li>
       <ul>
-        <li> Real-time location tracking through a large global network</li>
-        <li> Helps recover lost or stolen wallets</li>
-        <li> Compact and easy to carry without adding bulk</li>
-        <li> Can notify users if they leave their wallet behind</li>
+        <li> Real-time location tracking </li>
+        <li> Helps recover lost wallets</li>
+        <li> Compact and easy to carry</li>
       </ul>
 
     <li>What is missing</li>
       <ul>
         <li> Does not prevent theft from happening</li>
-        <li> Alerts may not trigger immediately during pickpocketing</li>
-        <li> Requires Apple ecosystem to function fully</li>
-        <li> Tracker can be removed and discarded by the thief</li>
+        <li> Alerts may not trigger during pickpocketing</li>
+        <li> Tracker can be removed by the thief</li>
       </ul>
   </ul>
-  <img src="airtag.jpg" alt="AirTag in wallet" width="250">
+   <div class="solution-image">
+      <img src="airtag.jpg" alt="Solution 2 image">
+    </div>
 </div>
 </section>
 
@@ -143,31 +145,62 @@
   <div class="solution-overview">
     <div class="solution-images">
       <div class="solution-img">
-        <img src="Wallet.png" alt="Fingerprint Wallet concept" width="400">
+        <img class="wallet-concept" src="Wallet.png" alt="Fingerprint Wallet concept">
         <p><em>Wallet Concept Design</em></p>
       </div>
-      <div class="solution-img">
-        <img src="Wallet full skeleton.png" alt="Wallet exploded view with labeled layers" width="400">
-        <p><em>Skeleton View Concept Design</em></p>
+           <div class="solution-img">
+          <img class="cad-model" src="CAD.png" alt="Current CAD model">
+        <p><em>Current CAD Model</em></p>
       </div>
+
     </div>
     <div class="solution-images inspiration-row" style="margin-top: 1.5rem;">
       <div class="solution-img">
-        <img src="Wallet1.png" alt="Inspiration product view 1" width="300">
+        <img src="Wallet1.png" alt="Inspiration product view 1" width="250" height="250">
         <p><em>Inspiration Product</em></p>
       </div>
       <div class="solution-img">
-        <img src="Wallet2.png" alt="Inspiration product view 2" width="300">
+        <img src="Wallet2.png" alt="Inspiration product view 2" width="250" height="250">
         <p><em>Inspiration Product</em></p>
       </div>
-      <div class="solution-img">
-        <img src="CAD.png" alt="Current CAD model" width="300">
-        <p><em>Current CAD Model</em></p>
-      </div>
+ 
     </div>
   </div>
 
-  <h3>What the Technology Will Do</h3>
+
+
+<h3>Technological Aspects of Solution</h3>
+
+<div class="tech-layers-layout">
+
+  <div class="tech-layers-text">
+    <ul class="layers">
+      <li><strong>Layer 1 — The Face:</strong> The top shell features a precisely machined circular cutout for the fingerprint sensor. A small pinhole at the top houses the ambient light sensor, this allows the wallet to "know" it's in your pocket so it doesn't accidentally trigger.</li>
+
+      <li><strong>Layer 2 — The Gesture Strip:</strong> Directly beneath the top shell is a capacitive touch module. It's designed to swipe or tap on the surface of the wallet to interact with it.</li>
+
+      <li><strong>Layer 3 — The PCB:</strong> ESP32-S3 module, biometric sensor, power and connectivity management, audio feedback, motion sensors, LED indicators.</li>
+
+      <li><strong>Layer 4 — The Battery:</strong> A rechargeable lithium battery.</li>
+
+      <li><strong>Layer 5 — The Motor:</strong> A micro stepper motor positioned next to the battery, responsible for the card ejection mechanism.</li>
+
+      <li><strong>Layer 6 — RFID Mesh:</strong> A layer that blocks contactless card skimming, protecting your cards from unauthorized RFID readers.</li>
+
+      <li><strong>Layer 7 — The Card Stack:</strong> The compartment that holds your physical cards, secured behind all the protective layers above.</li>
+
+      <li><strong>Layer 8 — The Chassis:</strong> The bottom shell that holds everything together.</li>
+    </ul>
+  </div>
+
+  <div class="tech-layers-image">
+    <img src="Wallet full skeleton.png" alt="Wallet exploded view with labeled layers">
+    <p><em>Skeleton View Concept Design</em></p>
+  </div>
+
+</div>
+
+    <h3>What the Technology Will Do</h3>
   <ul>
     <li>Authenticate the owner via fingerprint before allowing the wallet to open</li>
     <li>Detect unauthorized removal from your pocket using motion sensors</li>
@@ -176,27 +209,25 @@
     <li>Provide haptic and audio feedback for user interactions</li>
   </ul>
 
-  <h3>Technological Aspects of Solution</h3>
-  <ul class="layers">
-    <li><strong>Layer 1 — The Face:</strong> The top shell features a precisely machined circular cutout for the fingerprint sensor. A small pinhole at the top houses the ambient light sensor, this allows the wallet to "know" it's in your pocket so it doesn't accidentally trigger.</li>
-    <li><strong>Layer 2 — The Gesture Strip:</strong> Directly beneath the top shell is a capacitive touch module. It's designed to swipe or tap on the surface of the wallet to interact with it.</li>
-    <li><strong>Layer 3 — The PCB:</strong> ESP32-S3 module, biometric sensor, power and connectivity management, audio feedback, motion sensors, LED indicators.</li>
-    <li><strong>Layer 4 — The Battery:</strong> A rechargeable lithium battery.</li>
-    <li><strong>Layer 5 — The Motor:</strong> A micro stepper motor positioned next to the battery, responsible for the card ejection mechanism.</li>
-    <li><strong>Layer 6 — RFID Mesh:</strong> A layer that blocks contactless card skimming, protecting your cards from unauthorized RFID readers.</li>
-    <li><strong>Layer 7 — The Card Stack:</strong> The compartment that holds your physical cards, secured behind all the protective layers above.</li>
-    <li><strong>Layer 8 — The Chassis:</strong> The bottom shell that holds everything together.</li>
-  </ul>
-
 </section>
 
 <section id="block-diagram">
   <h2>Block Diagram of Technology</h2>
   <div class="block-diagram">
-    <img src="Technology Block Diagram.jpg" alt="Technology Block Diagram" width="500">
-    <img src="State_Machine.png" alt="State Machine Diagram" width="500">
-    <p><em>Overall system block diagram showing ESP32-S3 microcontroller, sensors, actuators, power, and mobile app connectivity</em></p>
+
+  <div class="diagram-images">
+    <img src="Technology Block Diagram.jpg" alt="Technology Block Diagram">
+    <img src="State_Machine.png" alt="State Machine Diagram">
   </div>
+
+  <p>
+    <em>
+      Overall system block diagram showing ESP32-S3 microcontroller,
+      sensors, actuators, power, and mobile app connectivity
+    </em>
+  </p>
+
+</div>
 </section>
 
 <section id="milestones">
@@ -252,7 +283,7 @@
 
 <section id="Poster">
 <h2><a href="https://docs.google.com/presentation/d/122mFUHDba3azXdcyf6lsMQzxCOAW6XJROJEv4InLaDI/edit?slide=id.p1#slide=id.p1">Poster</a></h2>
-    <img src="ECE 196 Project Poster.png" alt="Project Poster" width="700">
+    <img src="ECE 196 Project Poster.png" alt="Project Poster" >
 </section>
   <section id="Video">
   <h2><a href="https://docs.google.com/document/d/1hPFYabFbzJ7slNuurlS4tCz-e0iYMCi0ZIbYs_rMffc/edit?usp=sharing">Link to Video Idea</a></h2>
