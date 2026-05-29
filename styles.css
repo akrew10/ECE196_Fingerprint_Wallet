@@ -271,6 +271,13 @@ p {
   color: var(--text-muted);
 }
 
+.wallet-concept,
+.cad-model {
+  width: 300px;
+  height: 200px;
+  object-fit: contain;
+}
+
 /* =========================
    Layer Cards
 ========================= */
@@ -290,6 +297,48 @@ ul.layers li {
 
 ul.layers li strong {
   color: var(--text-primary);
+}
+
+.tech-layers-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.tech-layers-text {
+  flex: 1 1 60%;
+}
+
+.tech-layers-image {
+  flex: 0 0 35%;
+  text-align: center;
+  position: sticky;
+  top: 100px;
+}
+
+.tech-layers-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 18px;
+  box-shadow: var(--shadow-light);
+}
+
+.tech-layers-image p {
+  margin-top: 12px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 1000px) {
+  .tech-layers-layout {
+    flex-direction: column;
+  }
+
+  .tech-layers-image {
+    position: static;
+    margin: 0 auto;
+  }
 }
 
 /* =========================
@@ -323,9 +372,24 @@ li {
   margin-top: 15px;
 }
 
+
 .block-diagram em {
   color: var(--text-muted);
   font-size: 0.95rem;
+}
+
+.diagram-images {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.diagram-images img {
+  flex: 1;
+  max-width: 500px;
+  width: 0;
 }
 
 /* =========================
@@ -529,6 +593,46 @@ section:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.solution-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.solution-text {
+  flex: 1 1 500px;
+}
+
+.solution {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: nowrap;
+}
+
+.solution ul {
+  flex: 1;
+  min-width: 0;
+}
+.solution-image {
+  flex: 0 0 200px;
+}
+
+.solution-image {
+  flex: 0 1 250px;
+  text-align: center;
+}
+
+.solution-image img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-light);
+}
+
 .solution-img img:hover,
 .block-diagram img:hover,
 .pcb-diagram img:hover,
@@ -556,6 +660,17 @@ td {
 /* Make poster section fit cleaner */
 #Poster img {
   max-width: 85%;
+}
+
+#Poster {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#Poster img {
+  max-width: 90%;
+  height: auto;
 }
 
 /* Presentation-friendly spacing */
