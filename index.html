@@ -8,11 +8,18 @@
 </head>
 <body>
 
-<header>
-  <h1>Fingerprint Authenticated Wallet</h1>
-  <p>ECE 196 Spring 2026</p>
-</header>
+<header class="hero-header">
 
+  <div class="header-text">
+    <h1>Fingerprint Wallet</h1>
+    <p>ECE 196 Spring 2026</p>
+  </div>
+
+  <div class="header-logo">
+    <img src="UCSDLogo.png" alt="UCSD Logo">
+  </div>
+
+</header>
 <nav>
   <a href="#team">Team</a>
   <a href="#problem">Problem</a>
@@ -20,24 +27,46 @@
   <a href="#block-diagram">Block Diagram</a>
   <a href="#milestones">Milestones</a>
   <a href="#pcb-diagram">PCB Diagrams</a>
-  <a href="#Poster">Poster/Video</a>
+  <a href="#Poster">Poster</a>
+    <a href="#tutorial">Tutorials/References</a>
+  <a href="#product">Final Product/Demo</a>
 </nav>
 
 <section id="team">
   <h2>Our Team</h2>
+
   <div class="team">
+
     <div class="member">
-      <img src="Alexis.jpg" alt="Member 1">
+      <img src="Alexis.jpg" alt="Alexis Navarrete">
       <p>Alexis Navarrete</p>
+      <a href="https://www.linkedin.com/in/ALEXIS-LINK-HERE/"
+         target="_blank"
+         class="linkedin-link">
+         LinkedIn Profile
+      </a>
     </div>
+
     <div class="member">
-      <img src="Aiden.JPG" alt="Member 2">
+      <img src="Aiden.JPG" alt="Aiden Krueger">
       <p>Aiden Krueger</p>
+      <a href="https://www.linkedin.com/in/aiden-krueger-951699247"
+         target="_blank"
+         class="linkedin-link">
+         LinkedIn Profile
+      </a>
     </div>
+
     <div class="member">
-      <img src="Eric.jpg" alt="Member 3">
+      <img src="Eric.jpg" alt="Erictuan Nong">
       <p>Erictuan Nong</p>
+      <a href="https://www.linkedin.com/in/erictuan-nong/"
+         target="_blank"
+         class="linkedin-link">
+         LinkedIn Profile
+      </a>
     </div>
+
   </div>
 </section>
 
@@ -45,7 +74,7 @@
   <h2>Problem</h2>
 
   <h3>Problem Definition</h3>
-  <p>
+  <p style="text-align: center;">
      People carrying physical wallets in crowded urban areas face a high risk of pickpocketing.
      When thefts happen, victims lose not only their money but also sensitive personal information.
   </p>
@@ -230,6 +259,25 @@
 </div>
 </section>
 
+
+  <section id="pcb-diagram">
+  <h2>PCB</h2>
+    <p> The purpose of our PCB is for the fingerprint authentication so that only the registered owner(s) can open the wallet. 
+      Upon receiving the signal that the correct fingerprint was provided, the PCB will send a signal to the motor to unlock it.
+      We also have an IMU to detect irregular motion in case of theft. Combined with a disconnected Bluetooth, the wallet will alarm
+      the buzzer so that the owner can find it before the thief can get far. </p>
+  <div class="pcb-diagram">
+    <h3>PCB Schematic</h3>
+    <img src="kicad_sch.png" alt="PCB Schematic" width="700">
+    <h3>PCB Design</h3>
+     <img src="kicad_pcb.png" alt="PCB Diagram" width="700">
+    <h3>3D Viewer</h3>
+     <img src="kicad_3d_annotated.png" alt="PCB 3D Viewer" width="700">
+  </div>
+</section>
+
+
+
 <section id="milestones">
 
 
@@ -263,30 +311,132 @@
       Goal: Polish project for submission and demonstration. </td>
     </tr>
   </table>
-</section>
 
-  <section id="pcb-diagram">
-  <h2>PCB</h2>
-    <p> The purpose of our PCB is for the fingerprint authentication so that only the registered owner(s) can open the wallet. 
-      Upon receiving the signal that the correct fingerprint was provided, the PCB will send a signal to the motor to unlock it.
-      We also have an IMU to detect irregular motion in case of theft. Combined with a disconnected Bluetooth, the wallet will alarm
-      the buzzer so that the owner can find it before the thief can get far. </p>
-  <div class="pcb-diagram">
-    <h3>PCB Schematic</h3>
-    <img src="kicad_sch.png" alt="PCB Schematic" width="700">
-    <h3>PCB Design</h3>
-     <img src="kicad_pcb.png" alt="PCB Diagram" width="700">
-    <h3>3D Viewer</h3>
-     <img src="kicad_3d_annotated.png" alt="PCB 3D Viewer" width="700">
+  <p></p>
+  <h3>Challenges</h3>
+  <div class="progress-card">
+    
+
+  <div class="progress-content">
+    <h4>Unconnected Motor</h4>
+
+    <p>
+        Accidentally leaving the motor control unconnected was a big roadblock to overcome.
+        We wired the motor control to the boot button control for the fix.
+    </p>
   </div>
+
+  <div class="progress-image">
+
+    <img src="motor_pcb2.jpg" alt="Fingerprint testing" >
+  </div>
+
+</div>
+
+<div class="progress-card">
+
+  <div class="progress-content">
+    <h4>CAD Iterations</h4>
+
+    <p>
+        Constant iterations on the CAD model to make the measurements right as well as fitting it onto the product
+    </p>
+  </div>
+
+  <div class="progress-image">
+    <img src="old_CAD.png" alt="Fingerprint testing" width = "200">
+  </div>
+
+</div>
+
+<div class="progress-card">
+
+  <div class="progress-content">
+    <h4>NMOS Wired Incorrectly</h4>
+
+    <p>
+        When wiring the NMOS for the buzzer, we had switched the gate and source wirings on accident.
+        The fix was to get a different nmos and manually bend the pins into their right spot.
+    </p>
+  </div>
+
+  <div class="progress-image">
+    <img src="nmos_pcb.jpg" alt="Fingerprint testing">
+  </div>
+
+</div>
+
 </section>
 
 <section id="Poster">
 <h2><a href="https://docs.google.com/presentation/d/122mFUHDba3azXdcyf6lsMQzxCOAW6XJROJEv4InLaDI/edit?slide=id.p1#slide=id.p1">Poster</a></h2>
     <img src="ECE 196 Project Poster.png" alt="Project Poster" >
 </section>
-  <section id="Video">
-  <h2><a href="https://docs.google.com/document/d/1hPFYabFbzJ7slNuurlS4tCz-e0iYMCi0ZIbYs_rMffc/edit?usp=sharing">Link to Video Idea</a></h2>
+
+<section id="tutorial">
+
+  <div class="resource-columns">
+
+    <div class="resource-column">
+      <h3>Tutorials</h3>
+
+      <div class="resource-item">
+        <p>Bluetooth Low Energy (BLE) on ESP32</p>
+        <a href="https://github.com/erictuannong/MiniProject-3" target="_blank">
+          View Tutorial
+        </a>
+      </div>
+
+      <div class="resource-item">
+        <p>Implementing an IMU on ESP32</p>
+        <a href="https://github.com/akrew10/Mini_Project-3" target="_blank">
+          View Tutorial
+        </a>
+      </div>
+
+      <div class="resource-item">
+        <p>Implementing a Fingerprint Sensor</p>
+        <a href="placeholder" target="_blank">
+          View Tutorial
+        </a>
+      </div>
+    </div>
+
+    <div class="resource-column">
+      <h3>References</h3>
+
+      <div class="resource-item">
+        <p>FPC2534 Fingerprint Sensor Hookup Guide</p>
+        <a href="https://docs.sparkfun.com/SparkFun_Qwiic_Fingerprint_Sensor_FPC2534/introduction/" target="_blank">
+          View Reference
+        </a>
+      </div>
+
+      <div class="resource-item">
+        <p>Product Inspiration</p>
+        <a href="placeholder" target="_blank">
+          View Reference
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section id="product">
+  <h2>Finished Product</h2>
+<div class="image-container">
+    <div class="final-image">
+      <img src="product_inside.png" alt="Inside Wallet">
+    </div>
+    <div class="final-image">
+      <img src="product_slide.png" alt="Wallet Sliding">
+    </div>
+  </div>
+  </div>
+
+  <h3><a href="https://docs.google.com/document/d/1hPFYabFbzJ7slNuurlS4tCz-e0iYMCi0ZIbYs_rMffc/edit?usp=sharing">Link to Demo </a></h2>
 </section>
 
 <footer>
