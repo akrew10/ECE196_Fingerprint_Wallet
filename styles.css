@@ -34,6 +34,8 @@ body {
   line-height: 1.6;
 }
 
+
+
 /* =========================
    Header
 ========================= */
@@ -62,6 +64,21 @@ header p {
   letter-spacing: 0.5px;
 }
 
+.hero-header {
+  position: relative;
+  text-align: center;
+}
+
+.header-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.header-logo img {
+  max-height: 80px;
+  width: auto;
+}
 /* =========================
    Navigation
 ========================= */
@@ -183,12 +200,12 @@ p {
 .solutions {
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 15px;
 }
 
 .solution {
   background: #f9f9fb;
-  padding: 24px;
+  padding: 15px;
   border-radius: var(--radius-small);
   border: 1px solid rgba(0,0,0,0.04);
 }
@@ -205,7 +222,7 @@ p {
 }
 
 .solution li {
-  margin-bottom: 8px;
+  margin-bottom: 5px;
   color: var(--text-secondary);
 }
 
@@ -247,7 +264,7 @@ p {
 ========================= */
 .solution-images {
   display: flex;
-  gap: 28px;
+  gap: 20px;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -352,6 +369,60 @@ li {
   margin-bottom: 10px;
 }
 
+.milestone-card {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+
+.milestone-image {
+  flex: 0 0 350px;
+}
+
+.milestone-image img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: var(--shadow-light);
+}
+
+.milestone-content {
+  flex: 1;
+}
+
+.milestone-content h4 {
+  margin-top: 20px;
+}
+
+.progress-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+
+  margin: 20px 0;
+  padding: 20px;
+
+  border-radius: 18px;
+  background: white;
+  box-shadow: var(--shadow-light);
+}
+
+.progress-content {
+  flex: 1;
+}
+
+.progress-image {
+  flex: 0 0 300px;
+  text-align: center;
+}
+
+.progress-image img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-light);
+}
 /* =========================
    Block Diagram + PCB + Poster
 ========================= */
@@ -410,7 +481,7 @@ a:hover {
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 22px;
+  margin-top: 50px;
   overflow: hidden;
   border-radius: 14px;
 }
@@ -687,5 +758,73 @@ td {
 
   .inspiration-row .solution-img img {
     max-width: 180px;
+  }
+}
+
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px; 
+    width: 100%;
+  }
+
+  .final-image {
+    width: 45%; /* Explicitly set the width of the columns */
+    height: 500px; /* Set a matching height for both containers (adjust this number as needed!) */
+  }
+
+  .final-image img {
+    width: 100%; 
+    height: 100%; /* Force the image to fill the 350px container height */
+
+    display: block;
+  }
+
+  /* =========================
+   Tutorials & References
+========================= */
+
+.resource-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.resource-column {
+  flex: 1;
+}
+
+.resource-column h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.resource-item {
+  padding: 18px;
+  margin-bottom: 18px;
+  border-radius: 16px;
+  background: white;
+  box-shadow: var(--shadow-light);
+}
+
+.resource-item p {
+  margin-bottom: 10px;
+}
+
+.resource-item a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.resource-item a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .resource-columns {
+    flex-direction: column;
   }
 }
