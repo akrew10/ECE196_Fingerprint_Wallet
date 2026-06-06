@@ -27,9 +27,9 @@
   <a href="#block-diagram">Block Diagram</a>
   <a href="#milestones">Milestones</a>
   <a href="#pcb-diagram">PCB Diagrams</a>
-  <a href="#product">Final Product/Demo</a>
-  <a href="#tutorial">Tutorials/References</a>
   <a href="#Poster">Poster</a>
+    <a href="#tutorial">Tutorials/References</a>
+  <a href="#product">Final Product/Demo</a>
 </nav>
 
 <section id="team">
@@ -74,7 +74,7 @@
   <h2>Problem</h2>
 
   <h3>Problem Definition</h3>
-  <p style="text-align: center; margin-left: auto; margin-right: auto;">
+  <p style="text-align: center;">
      People carrying physical wallets in crowded urban areas face a high risk of pickpocketing.
      When thefts happen, victims lose not only their money but also sensitive personal information.
   </p>
@@ -108,6 +108,7 @@
   <h3>Existing Solutions</h3>
   <div class="solutions">
     <div class="solution">
+      <h4>Solution 1</h4>
         <h3>Anti-Theft Bags</h3>
       <ul>
         <li>What works well</li>
@@ -132,6 +133,7 @@
     </div>
 
     <div class="solution">
+  <h4>Solution 2</h4>
   <h3>Apple AirTag</h3>
   <ul>
 
@@ -159,12 +161,12 @@
   <h2>Our Solution</h2>
 
   <h3>Real-time Wallet Protection</h3>
-  <p style="text-align: center; margin-left: auto; margin-right: auto;">
+  <p>
     A smart, biometric secured wallet that uses fingerprint authentication, motion detection, and wireless connectivity to prevent theft and protect your belongings in real time.
   </p>
 
   <h3>Testable Hypothesis</h3>
-  <p style="text-align: center; margin-left: auto; margin-right: auto;">
+  <p>
     If a wallet combines biometric authentication, BLE-based proximity monitoring, and mobile alerts, then it can reduce successful pickpocketing incidents by preventing unauthorized access and notifying the owner immediately when separation occurs.
   </p>
 
@@ -241,27 +243,26 @@
 <section id="block-diagram">
   <h2>Block Diagram of Technology</h2>
   <div class="block-diagram">
-    <img src="Technology Block Diagram.jpg" alt="Technology Block Diagram" style="max-width: 700px;">
-    <p>
-      <em>
-        Overall system block diagram showing ESP32-S3 microcontroller,
-        sensors, actuators, power, and mobile app connectivity
-      </em>
-    </p>
-  </div>
-</section>
 
-<section id="state-machine">
-  <h2>State Machine</h2>
-  <div class="block-diagram">
-    <img src="State_Machine.png" alt="State Machine Diagram" style="max-width: 700px;">
+  <div class="diagram-images">
+    <img src="Technology Block Diagram.jpg" alt="Technology Block Diagram">
+    <img src="State_Machine.png" alt="State Machine Diagram">
   </div>
+
+  <p>
+    <em>
+      Overall system block diagram showing ESP32-S3 microcontroller,
+      sensors, actuators, power, and mobile app connectivity
+    </em>
+  </p>
+
+</div>
 </section>
 
 
   <section id="pcb-diagram">
   <h2>PCB</h2>
-    <p style="text-align: center; margin-left: auto; margin-right: auto;"> The purpose of our PCB is for the fingerprint authentication so that only the registered owner(s) can open the wallet.
+    <p> The purpose of our PCB is for the fingerprint authentication so that only the registered owner(s) can open the wallet. 
       Upon receiving the signal that the correct fingerprint was provided, the PCB will send a signal to the motor to unlock it.
       We also have an IMU to detect irregular motion in case of theft. Combined with a disconnected Bluetooth, the wallet will alarm
       the buzzer so that the owner can find it before the thief can get far. </p>
@@ -332,21 +333,6 @@
 
 </div>
 
-<div class="progress-card">
-
-  <div class="progress-content">
-    <h4>CAD Iterations</h4>
-
-    <p>
-        Constant iterations on the CAD model to make the measurements right as well as fitting it onto the product
-    </p>
-  </div>
-
-  <div class="progress-image">
-    <img src="old_CAD.png" alt="Fingerprint testing" width = "200">
-  </div>
-
-</div>
 
 <div class="progress-card">
 
@@ -365,21 +351,133 @@
 
 </div>
 
+
+<h4>CAD Design Evolution</h4>
+
+<div class="cad-evolution">
+
+  <!-- Iteration 1 -->
+  <div class="cad-step">
+
+    <div class="cad-image">
+      <img src="old_CAD.png" alt="CAD Iteration 1">
+    </div>
+
+    <div class="cad-content">
+      <h5>Iteration 1 — Initial Concept</h5>
+
+      <p>
+        The initial CAD model focused on determining the overall form factor
+        of the smart wallet and verifying that the fingerprint sensor could be
+        incorporated into the top surface.
+      </p>
+
+      <strong>Issue Identified:</strong>
+      <p>
+        Internal space requirements for the PCB, battery, and wiring had not
+        yet been considered, resulting in unrealistic dimensions.
+      </p>
+
+      <strong>Design Change:</strong>
+      <p>
+        The internal cavity dimensions were increased and component locations
+        were mapped to better reflect the final hardware layout.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Iteration 2 -->
+  <div class="cad-step">
+
+    <div class="cad-image">
+      <img src="oldcad2.jpg" alt="CAD Iteration 2">
+    </div>
+
+    <div class="cad-content">
+      <h5>Iteration 2 — Component Integration</h5>
+
+      <p>
+        After receiving hardware components, the CAD model was updated using
+        measured dimensions of the fingerprint sensor, ESP32-S3 board, and battery.
+      </p>
+
+      <strong>Issue Identified:</strong>
+      <p>
+        Component interference occurred between the battery compartment and
+        the planned locking mechanism.
+      </p>
+
+      <strong>Design Change:</strong>
+      <p>
+        The battery was repositioned and the internal mounting structure
+        redesigned to accommodate both systems.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Iteration 3 -->
+  <div class="cad-step">
+
+    <div class="cad-image">
+      <img src="oldcad3.jpg" alt="CAD Iteration 3">
+    </div>
+
+    <div class="cad-content">
+      <h5>Iteration 3 — Locking Mechanism Revision</h5>
+
+      <p>
+        Focus shifted toward integrating the motorized locking mechanism
+        and ensuring reliable card retention. We had to make holes on the sides to make 
+        space for the motor.
+      </p>
+
+      <strong>Issue Identified:</strong>
+      <p>
+        Early versions did not have the locking mechanism planned out.
+      </p>
+
+      <strong>Design Change:</strong>
+      <p>
+        Clearances were adjusted and the locking geometry was redesigned
+        to improve mechanical reliability.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- Iteration 4 -->
+  <div class="cad-step">
+
+    <div class="cad-image">
+      <img src="CAD.png" alt="CAD Iteration 4">
+    </div>
+
+    <div class="cad-content">
+      <h5>Iteration 4 — Final Design</h5>
+
+      <p>
+        The final iteration combined the PCB, battery, sensors, locking
+        mechanism, and housing into a manufacturable assembly.
+      </p>
+
+      <strong>Improvement Achieved:</strong>
+      <p>
+        The final design successfully met size constraints while supporting
+        all required electronics and mechanical features.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
 </section>
 
-<section id="product">
-  <h2>Finished Product</h2>
-<div class="image-container">
-    <div class="final-image">
-      <img src="product_inside.png" alt="Inside Wallet">
-    </div>
-    <div class="final-image">
-      <img src="product_slide.png" alt="Wallet Sliding">
-    </div>
-  </div>
-  </div>
-
-  <h3><a href="https://docs.google.com/document/d/1hPFYabFbzJ7slNuurlS4tCz-e0iYMCi0ZIbYs_rMffc/edit?usp=sharing">Link to Demo </a></h2>
+<section id="Poster">
+<h2><a href="https://docs.google.com/presentation/d/122mFUHDba3azXdcyf6lsMQzxCOAW6XJROJEv4InLaDI/edit?slide=id.p1#slide=id.p1">Poster</a></h2>
+    <img src="ECE 196 Project Poster.png" alt="Project Poster" >
 </section>
 
 <section id="tutorial">
@@ -433,9 +531,19 @@
 
 </section>
 
-<section id="Poster">
-<h2><a href="https://docs.google.com/presentation/d/122mFUHDba3azXdcyf6lsMQzxCOAW6XJROJEv4InLaDI/edit?slide=id.p1#slide=id.p1">Poster</a></h2>
-    <img src="ECE 196 Project Poster.png" alt="Project Poster" >
+<section id="product">
+  <h2>Finished Product</h2>
+<div class="image-container">
+    <div class="final-image">
+      <img src="product_inside.png" alt="Inside Wallet">
+    </div>
+    <div class="final-image">
+      <img src="product_slide.png" alt="Wallet Sliding">
+    </div>
+  </div>
+  </div>
+
+  <h3><a href="https://docs.google.com/document/d/1hPFYabFbzJ7slNuurlS4tCz-e0iYMCi0ZIbYs_rMffc/edit?usp=sharing">Link to Demo </a></h2>
 </section>
 
 <footer>
