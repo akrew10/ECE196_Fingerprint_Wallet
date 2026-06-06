@@ -828,3 +828,39 @@ td {
     flex-direction: column;
   }
 }
+
+.cad-step {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  margin: 25px 0;
+  padding: 20px;
+  border-radius: 18px;
+  background: white;
+  box-shadow: var(--shadow-light);
+}
+
+.cad-image {
+  flex: 0 0 250px;
+}
+
+.cad-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: var(--shadow-light);
+}
+
+.cad-content {
+  flex: 1;
+}
+
+.cad-content h5 {
+  margin-top: 0;
+  font-size: 1.15rem;
+}
+
+@media (max-width: 900px) {
+  .cad-step {
+    flex-direction: column;
+  }
+}
