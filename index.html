@@ -27,9 +27,9 @@
   <a href="#block-diagram">Block Diagram</a>
   <a href="#milestones">Milestones</a>
   <a href="#pcb-diagram">PCB Diagrams</a>
-  <a href="#Poster">Poster</a>
-    <a href="#tutorial">Tutorials/References</a>
   <a href="#product">Final Product/Demo</a>
+  <a href="#tutorial">Tutorials/References</a>
+  <a href="#Poster">Poster</a>
 </nav>
 
 <section id="team">
@@ -40,7 +40,7 @@
     <div class="member">
       <img src="Alexis.jpg" alt="Alexis Navarrete">
       <p>Alexis Navarrete</p>
-      <a href="https://www.linkedin.com/in/ALEXIS-LINK-HERE/"
+      <a href="https://www.linkedin.com/in/alexis-navarrete-62a9292b7/"
          target="_blank"
          class="linkedin-link">
          LinkedIn Profile
@@ -74,7 +74,7 @@
   <h2>Problem</h2>
 
   <h3>Problem Definition</h3>
-  <p style="text-align: center;">
+  <p style="text-align: center; margin-left: auto; margin-right: auto;">
      People carrying physical wallets in crowded urban areas face a high risk of pickpocketing.
      When thefts happen, victims lose not only their money but also sensitive personal information.
   </p>
@@ -108,7 +108,6 @@
   <h3>Existing Solutions</h3>
   <div class="solutions">
     <div class="solution">
-      <h4>Solution 1</h4>
         <h3>Anti-Theft Bags</h3>
       <ul>
         <li>What works well</li>
@@ -133,7 +132,6 @@
     </div>
 
     <div class="solution">
-  <h4>Solution 2</h4>
   <h3>Apple AirTag</h3>
   <ul>
 
@@ -161,12 +159,12 @@
   <h2>Our Solution</h2>
 
   <h3>Real-time Wallet Protection</h3>
-  <p>
+  <p style="text-align: center; margin-left: auto; margin-right: auto;">
     A smart, biometric secured wallet that uses fingerprint authentication, motion detection, and wireless connectivity to prevent theft and protect your belongings in real time.
   </p>
 
   <h3>Testable Hypothesis</h3>
-  <p>
+  <p style="text-align: center; margin-left: auto; margin-right: auto;">
     If a wallet combines biometric authentication, BLE-based proximity monitoring, and mobile alerts, then it can reduce successful pickpocketing incidents by preventing unauthorized access and notifying the owner immediately when separation occurs.
   </p>
 
@@ -186,14 +184,17 @@
     <div class="solution-images inspiration-row" style="margin-top: 1.5rem;">
       <div class="solution-img">
         <img src="Wallet1.png" alt="Inspiration product view 1" width="250" height="250">
-        <p><em>Inspiration Product</em></p>
+        <p><em>Inspiration Product — <a href="https://www.amazon.com/stores/page/0DD17EDF-8BC1-4EDE-9D57-6C3C1B3D63C6?ingress=0&visitId=51e45933-0888-4c52-8a63-f331487530a7" target="_blank">Base Card Holder Platform</a></em></p>
       </div>
       <div class="solution-img">
         <img src="Wallet2.png" alt="Inspiration product view 2" width="250" height="250">
-        <p><em>Inspiration Product</em></p>
+        <p><em>Inspiration Product — <a href="https://www.amazon.com/stores/page/0DD17EDF-8BC1-4EDE-9D57-6C3C1B3D63C6?ingress=0&visitId=51e45933-0888-4c52-8a63-f331487530a7" target="_blank">Base Card Holder Platform</a></em></p>
       </div>
- 
+
     </div>
+    <p style="text-align: center; margin-left: auto; margin-right: auto;">
+      Our wallet uses the card ejection mechanism and form factor from this existing card holder platform as a base, building upon it with custom smart features such as fingerprint authentication, motion detection, and BLE connectivity.
+    </p>
   </div>
 
 
@@ -212,13 +213,11 @@
 
       <li><strong>Layer 4 — The Battery:</strong> A rechargeable lithium battery.</li>
 
-      <li><strong>Layer 5 — The Motor:</strong> A micro stepper motor positioned next to the battery, responsible for the card ejection mechanism.</li>
+      <li><strong>Layer 5 — RFID Mesh:</strong> A layer that blocks contactless card skimming, protecting your cards from unauthorized RFID readers.</li>
 
-      <li><strong>Layer 6 — RFID Mesh:</strong> A layer that blocks contactless card skimming, protecting your cards from unauthorized RFID readers.</li>
+      <li><strong>Layer 6 — The Card Stack:</strong> The compartment that holds your physical cards, secured behind all the protective layers above.</li>
 
-      <li><strong>Layer 7 — The Card Stack:</strong> The compartment that holds your physical cards, secured behind all the protective layers above.</li>
-
-      <li><strong>Layer 8 — The Chassis:</strong> The bottom shell that holds everything together.</li>
+      <li><strong>Layer 7 — The Chassis:</strong> The bottom shell that holds everything together.</li>
     </ul>
   </div>
 
@@ -230,7 +229,7 @@
 </div>
 
     <h3>What the Technology Will Do</h3>
-  <ul>
+  <ul style="text-align: center; list-style-position: inside; margin-left: auto; margin-right: auto;">
     <li>Authenticate the owner via fingerprint before allowing the wallet to open</li>
     <li>Detect unauthorized removal from your pocket using motion sensors</li>
     <li>Send real-time alerts to your phone if potential theft is detected</li>
@@ -243,26 +242,27 @@
 <section id="block-diagram">
   <h2>Block Diagram of Technology</h2>
   <div class="block-diagram">
-
-  <div class="diagram-images">
-    <img src="Technology Block Diagram.jpg" alt="Technology Block Diagram">
-    <img src="State_Machine.png" alt="State Machine Diagram">
+    <img src="Technology Block Diagram.jpg" alt="Technology Block Diagram" style="max-width: 700px;">
+    <p>
+      <em>
+        Overall system block diagram showing ESP32-S3 microcontroller,
+        sensors, actuators, power, and mobile app connectivity
+      </em>
+    </p>
   </div>
+</section>
 
-  <p>
-    <em>
-      Overall system block diagram showing ESP32-S3 microcontroller,
-      sensors, actuators, power, and mobile app connectivity
-    </em>
-  </p>
-
-</div>
+<section id="state-machine">
+  <h2>State Machine</h2>
+  <div class="block-diagram">
+    <img src="State_Machine.png" alt="State Machine Diagram" style="max-width: 700px;">
+  </div>
 </section>
 
 
   <section id="pcb-diagram">
   <h2>PCB</h2>
-    <p> The purpose of our PCB is for the fingerprint authentication so that only the registered owner(s) can open the wallet. 
+    <p style="text-align: center; margin-left: auto; margin-right: auto;"> The purpose of our PCB is for the fingerprint authentication so that only the registered owner(s) can open the wallet.
       Upon receiving the signal that the correct fingerprint was provided, the PCB will send a signal to the motor to unlock it.
       We also have an IMU to detect irregular motion in case of theft. Combined with a disconnected Bluetooth, the wallet will alarm
       the buzzer so that the owner can find it before the thief can get far. </p>
@@ -313,7 +313,7 @@
   </table>
 
   <p></p>
-  <h3>Challenges</h3>
+  <h3>PCB Challenges</h3>
   <div class="progress-card">
     
 
@@ -347,6 +347,56 @@
 
   <div class="progress-image">
     <img src="nmos_pcb.jpg" alt="Fingerprint testing">
+  </div>
+
+</div>
+
+<div class="progress-card">
+
+  <div class="progress-content">
+    <h4>ZIF Connector Not Connected to 3.3V</h4>
+
+    <p>
+        The ZIF connector for the fingerprint sensor was not connected to the 3.3V power rail on the PCB.
+    </p>
+  </div>
+
+  <div class="progress-image">
+    <img src="ZIF connector.png" alt="ZIF Connector fix">
+  </div>
+
+</div>
+
+
+<h3>PCB Modification</h3>
+<div class="progress-card">
+
+  <div class="progress-content">
+    <h4>Buzzer GPIO Reassigned to Servo</h4>
+
+    <p>
+        Due to the unconnected motor issue, we repurposed the GPIO originally assigned to the buzzer to control the servo motor instead. This allowed us to keep the locking mechanism operational, but meant sacrificing the buzzer functionality from the final design.
+    </p>
+  </div>
+
+  <div class="progress-image">
+    <img src="09.jpg" alt="Buzzer GPIO reassigned to servo">
+  </div>
+
+</div>
+
+<div class="progress-card">
+
+  <div class="progress-content">
+    <h4>ZIF Connector Wired to 3.3V</h4>
+
+    <p>
+        To fix the ZIF connector not being connected to the 3.3V power rail, we manually wired the 3.3V supply to the ZIF connector to ensure the fingerprint sensor received proper power.
+    </p>
+  </div>
+
+  <div class="progress-image">
+    <img src="08.jpg" alt="ZIF Connector fix">
   </div>
 
 </div>
@@ -475,9 +525,18 @@
 
 </section>
 
-<section id="Poster">
-<h2><a href="https://docs.google.com/presentation/d/122mFUHDba3azXdcyf6lsMQzxCOAW6XJROJEv4InLaDI/edit?slide=id.p1#slide=id.p1">Poster</a></h2>
-    <img src="ECE 196 Project Poster.png" alt="Project Poster" >
+<section id="product">
+  <h2>Finished Product</h2>
+  <div class="image-container">
+    <div class="final-image">
+      <img src="product_inside.png" alt="Inside Wallet">
+    </div>
+    <div class="final-image">
+      <img src="product_slide.png" alt="Wallet Sliding">
+    </div>
+  </div>
+
+  <h3><a href="https://docs.google.com/document/d/1hPFYabFbzJ7slNuurlS4tCz-e0iYMCi0ZIbYs_rMffc/edit?usp=sharing">Link to Demo</a></h3>
 </section>
 
 <section id="tutorial">
@@ -503,7 +562,7 @@
 
       <div class="resource-item">
         <p>Implementing a Fingerprint Sensor</p>
-        <a href="placeholder" target="_blank">
+        <a href="https://alexnav28.github.io/Biometric-sensor-Tutorial---FPC2530/" target="_blank">
           View Tutorial
         </a>
       </div>
@@ -521,7 +580,14 @@
 
       <div class="resource-item">
         <p>Base Card Holder Platform</p>
-        <a href="placeholder" target="_blank">
+        <a href="https://www.amazon.com/stores/page/0DD17EDF-8BC1-4EDE-9D57-6C3C1B3D63C6?ingress=0&visitId=51e45933-0888-4c52-8a63-f331487530a7" target="_blank">
+          View Reference
+        </a>
+      </div>
+
+      <div class="resource-item">
+        <p>Is Pickpocketing in Europe Really That Bad?</p>
+        <a href="https://www.destinationdreamerdiaries.com/blog/is-pickpocketing-in-europe-really-that-bad" target="_blank">
           View Reference
         </a>
       </div>
@@ -531,19 +597,9 @@
 
 </section>
 
-<section id="product">
-  <h2>Finished Product</h2>
-<div class="image-container">
-    <div class="final-image">
-      <img src="product_inside.png" alt="Inside Wallet">
-    </div>
-    <div class="final-image">
-      <img src="product_slide.png" alt="Wallet Sliding">
-    </div>
-  </div>
-  </div>
-
-  <h3><a href="https://docs.google.com/document/d/1hPFYabFbzJ7slNuurlS4tCz-e0iYMCi0ZIbYs_rMffc/edit?usp=sharing">Link to Demo </a></h2>
+<section id="Poster">
+<h2><a href="https://docs.google.com/presentation/d/122mFUHDba3azXdcyf6lsMQzxCOAW6XJROJEv4InLaDI/edit?slide=id.p1#slide=id.p1">Poster</a></h2>
+    <img src="ECE 196 Project Poster.png" alt="Project Poster">
 </section>
 
 <footer>
